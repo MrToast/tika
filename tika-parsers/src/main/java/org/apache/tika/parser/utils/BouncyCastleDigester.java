@@ -24,7 +24,7 @@ import org.apache.commons.codec.binary.Base32;
 import org.apache.tika.parser.DigestingParser;
 import org.apache.tika.parser.digest.CompositeDigester;
 import org.apache.tika.parser.digest.InputStreamDigester;
-import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.bouncycastle.jcajce.provider.BouncyCastleFipsProvider;
 import org.bouncycastle.util.encoders.Hex;
 
 /**
@@ -95,7 +95,7 @@ public class BouncyCastleDigester extends CompositeDigester {
 
         @Override
         protected Provider getProvider() {
-            return new BouncyCastleProvider();
+            return new BouncyCastleFipsProvider();
         }
     }
 }

@@ -196,9 +196,21 @@
       <artifactId>pdfbox</artifactId>
       <version>${pdfbox.version}</version>
       <exclusions>
-        <exclusion>
+	<exclusion>
           <groupId>commons-logging</groupId>
           <artifactId>commons-logging</artifactId>
+        </exclusion>
+	<exclusion>
+          <groupId>org.bouncycastle</groupId>
+          <artifactId>bcprov-jdk15on</artifactId>
+        </exclusion>                                                                                                             
+        <exclusion>                                                                                                              
+          <groupId>org.bouncycastle</groupId>                                                                                    
+          <artifactId>bcpkix-jdk15on</artifactId>                                                                                
+        </exclusion>                                                                                                             
+        <exclusion>                                                                                                              
+          <groupId>org.bouncycastle</groupId>                                                                                    
+          <artifactId>bcmail-jdk15on</artifactId>                                                                                
         </exclusion>
       </exclusions>
     </dependency>
@@ -210,6 +222,18 @@
         <exclusion>
           <groupId>commons-logging</groupId>
           <artifactId>commons-logging</artifactId>
+        </exclusion>
+	<exclusion>
+          <groupId>org.bouncycastle</groupId>
+          <artifactId>bcprov-jdk15on</artifactId>
+        </exclusion>                                                                                                             
+        <exclusion>                                                                                                              
+          <groupId>org.bouncycastle</groupId>                                                                                    
+          <artifactId>bcpkix-jdk15on</artifactId>                                                                                
+        </exclusion>                                                                                                             
+        <exclusion>                                                                                                              
+          <groupId>org.bouncycastle</groupId>                                                                                    
+          <artifactId>bcmail-jdk15on</artifactId>                                                                                
         </exclusion>
         <exclusion>
           <groupId>org.apache.pdfbox</groupId>
@@ -232,13 +256,15 @@
          problems with encrypted PDFs. -->
     <dependency>
       <groupId>org.bouncycastle</groupId>
-      <artifactId>bcmail-jdk15on</artifactId>
-      <version>${bouncycastle.version}</version>
+      <artifactId>bcmail-fips</artifactId>
+      <version>1.0.1</version>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-jdk15on</artifactId>
-      <version>${bouncycastle.version}</version>
+      <artifactId>bc-fips</artifactId>
+      <version>1.0.2</version>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
